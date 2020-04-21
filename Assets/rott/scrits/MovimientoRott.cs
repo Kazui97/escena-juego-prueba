@@ -25,7 +25,7 @@ public class MovimientoRott : MonoBehaviour
         x = Input.GetAxis("Horizontal");
         y = Input.GetAxis("Vertical");
 
-        transform.Rotate(0, x * Rotacion * Time.deltaTime, 0);
+        transform.Translate(x * Rotacion * Time.deltaTime,0, 0);
         transform.Translate(0, 0, y * Velocidad * Time.deltaTime);
 
         Animaciones.SetFloat("VelX", x);
